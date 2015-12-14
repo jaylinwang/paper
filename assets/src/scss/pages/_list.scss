@@ -1,0 +1,44 @@
+.list{
+	.widget-title{
+		cursor: auto;
+		a:hover{
+			border-bottom: none;
+		}
+		small{
+			color: lighten($link-color, 5%)
+		}
+	}
+}
+.post-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	>li{
+		margin-bottom: 30px;
+		border-bottom: 1px dashed #ddd;
+		
+		cursor: pointer;
+		
+		&:hover{
+			border-bottom-color: $link-color;
+		}
+	}
+	>li>a{
+		text-decoration: none;	
+		color: $link-color;
+		&::before{
+			content: '';
+			display: inline-block;
+			height: 5px; 
+			width: 5px;
+			background: $link-color;
+			
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+	
+	.post-date{
+		float: right;
+	}
+}

@@ -1,0 +1,15 @@
+.btn{
+	display: inline-block;
+	padding: 5px 30px;
+	
+	text-decoration: none;
+	color: $link-color;
+	
+	border:2px solid #e3e3e3;
+	
+	&:hover{
+		color: darken($link-color,5%);
+		border-color: darken($link-color,5%);
+	}
+	
+}

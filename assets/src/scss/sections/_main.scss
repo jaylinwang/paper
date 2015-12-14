@@ -1,0 +1,8 @@
+.main-inner{
+	margin: 0 auto;
+	padding: 0 20px;
+	
+	@media (min-width: $screen-lg-min){
+		width: 900px; 
+	}
+}

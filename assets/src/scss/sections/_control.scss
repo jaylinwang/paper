@@ -1,0 +1,43 @@
+.control{
+	display: block;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 40px;
+	
+	.totop,
+	.switch{
+		height: 30px; 
+		width: 30px;
+		
+		line-height: 30px;
+		text-align: center;
+		
+		cursor: pointer;
+		background: #fff;
+		border:1px solid #e3e3e3;
+		
+		&:hover{
+			border-collapse: darken($link-color, 10%);
+			color: darken($link-color, 10%);
+		}
+	}
+	
+	.switch{
+		margin-bottom: 5px;
+	}
+	
+	.switch{
+		.switch-fold{
+			display: inline;
+		}
+		.switch-unfold{
+			display: none;
+		}
+	}
+	
+	//media
+	@media (max-width: $screen-md-max){
+		display: none;
+	}
+}

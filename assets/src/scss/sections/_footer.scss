@@ -1,0 +1,26 @@
+.footer{
+	background: #555;
+}
+
+.footer-inner{
+	margin: 0 auto;
+	padding: 30px 20px;
+	
+	color: #fff;
+	text-align: center;
+	
+	@media (min-width: $screen-lg-min){
+		width: 900px; 
+	}
+}
+
+.support{
+	.powered-by,
+	.theme-info{
+		display: iniline-block;
+		
+		a{
+			border-bottom: 1px dotted #e3e3e3;
+		}
+	}
+}

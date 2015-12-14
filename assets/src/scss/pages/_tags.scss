@@ -1,0 +1,26 @@
+.tags{
+	.widget-header{
+		text-align: center;
+		
+		.hr-line{
+			&:after{
+				background: #c8c8c8 none repeat scroll 0 0;
+				content: "";
+				height: 3px;
+				margin: auto;
+				
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -2px;
+				width: 45px;
+			}
+		}
+	}
+	
+	.widget-body{
+		>a{
+			margin-right: 10px;
+		}
+	}
+}

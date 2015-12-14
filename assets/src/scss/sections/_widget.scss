@@ -1,0 +1,45 @@
+.widget{
+	background: #fff;
+	margin-bottom: 30px;
+}
+.widget-header{
+	padding-top: 30px; 
+	padding-left: 30px; 
+	padding-right: 30px;
+	
+	.hr-line {
+		margin-top: 25px;
+		border: 0;
+		border-top: 1px solid #f0f0f0;
+		position: relative;
+	}
+}
+.widget-title{
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 10px; 
+	a:hover{
+		border-bottom: 1px dashed #c8c8c8;
+	}
+}
+
+.widget-meta{
+	font-size: 12px;
+	color:#c8c8c8;
+	
+	.divider{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.widget-body{
+	padding: 30px; 
+	text-align: justify;
+}
+
+.widget-footer{
+	padding-bottom: 30px; 
+	padding-left: 30px; 
+	padding-right: 30px;
+}

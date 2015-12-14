@@ -1,0 +1,116 @@
+.body-inner{
+	transition: padding-right 200ms;
+}
+.sidebar{
+	position: fixed;
+	right: -300px;
+	top: 0;	
+	bottom: 0;
+	 
+	width: 300px; 
+	
+	text-align: center;
+	background: #262a30;
+	
+	transition: right 200ms;
+	
+	.fa{
+		margin-right: 5px;
+	}
+}
+
+.sidebar-inner{
+	padding: 30px;
+}
+
+.site-author{
+	.site-author-avatar{
+		display: block;
+		margin: 0 auto;
+		max-width: 96px;
+		height: auto;
+		border: 2px solid #333;
+		padding: 2px;
+	}
+	.site-author-name{
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.site-description{
+	margin-top: 5px; 
+	margin-bottom: 15px;
+}
+
+.site-state{
+	margin: 20px 0;
+	padding: 0;
+	list-style: none;
+	
+	
+	>li{
+		display: inline-block;
+		padding-left: 15px;
+		padding-right: 15px;
+		border-right: 1px solid $link-color;
+		&:last-child{
+			border-right: none;
+		}
+		
+		>a{
+			display: inline-block;
+			color: $link-color;
+			text-decoration: none;
+		}
+		
+	}
+	
+	.site-state-count,
+	.site-state-name{
+		display: block;
+		line-height: 1.5;
+	}
+}
+
+.site-feed{
+	border-top: 1px dotted $link-color;
+	border-bottom: 1px dotted $link-color;
+	
+	a{
+		text-decoration: none;
+		color: #62a8ea;
+	}
+}
+
+.site-social{
+	@include clearfix;
+	margin: 20px 0;
+	padding: 0;
+	>li{
+		display: block;
+		width: 33.3333%;
+		float: left;
+		>a{
+			text-decoration: none;
+			color: $link-color;
+		}
+	}
+}
+
+.fold{
+	.body-inner{
+		padding-right: 300px;
+	}
+	.sidebar{
+		right: 0;
+	}
+	.switch{
+		.switch-fold{
+			display: none;
+		}
+		.switch-unfold{
+			display: inline;
+		}
+	}
+}
