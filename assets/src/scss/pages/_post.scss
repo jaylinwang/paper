@@ -18,6 +18,25 @@
 		}
 	}
 }
+.post-tags{
+	margin: 0 auto;
+	text-align: center;
+	>li{
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	>li>a{
+		border-bottom: 1px dotted transparent;
+		&:before{
+			content: '#';
+		}
+		
+		&:hover{
+			color: $link-hover-color;
+			border-bottom: 1px dotted $link-hover-color;
+		}
+	}
+}
 .post-navigation{
 	display: table;
 	width: 100%;

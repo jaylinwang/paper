@@ -1,7 +1,7 @@
 .control{
 	display: block;
 	position: fixed;
-	z-index: 999;
+	z-index: $zindex-control;
 	right: 20px;
 	bottom: 40px;
 	

@@ -1,11 +1,15 @@
 .body-inner{
 	transition: padding-right 200ms;
 }
+.footer-inner{
+	transition: padding-right 200ms;
+}
 .sidebar{
 	position: fixed;
 	right: -300px;
 	top: 0;	
 	bottom: 0;
+	z-index: $zindex-sidebar;
 	 
 	width: 300px; 
 	
@@ -100,6 +104,9 @@
 
 .fold{
 	.body-inner{
+		padding-right: 300px;
+	}
+	.footer-inner{
 		padding-right: 300px;
 	}
 	.sidebar{

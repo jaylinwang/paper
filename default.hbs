@@ -21,13 +21,15 @@
 </head>
 <body>
 	<div class="body-inner">
-        {{>header}}
+        {{> sections/header}}
         {{{body}}}
-        {{>control}}
-        {{>sidebar}}
-        {{>footer}}
+        {{> sections/control}}
+        {{> sections/sidebar}}
+        {{> sections/footer}}
 	</div>
-	{{! Ghost outputs important scripts and data with this tag }}
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
     <script type="text/javascript" src="{{asset "dist/js/onepice.min.js"}}"></script>
 </body>

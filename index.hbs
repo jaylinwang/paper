@@ -5,47 +5,28 @@
     <div class="main-inner">
         <div class="content">
             {{#foreach posts}}
-            <article class="widget">
-                <header class="widget-header">
-                    <h2 class="widget-title">
-                    <a href="{{url}}">{{{title}}}</a>
-                </h2>
-                    <div class="widget-meta">
-                        <span>发表于{{date format='YYYY-MM-DD'}}</span>
-                        <span class="divider">/</span>
-                        <span>180条评论</span>
-                    </div>
-                    <div class="hr-line"></div>
-                </header>
-                <section class="widget-body">
-                    NexT 主题 快满一周岁了，值此之际，碎碎念一下（没有干货）。正如我在 V2EX 分享 时的介绍一样，NexT 的前身叫做 Notes。在做 Notes 主题的时候，基于当时的需求出发点，从好听上来讲是简洁，不好听就是简陋（真直接，脸红）。。但是个人不太喜欢其图片替换原生效果的方式，页面加载速度不佳的时候，能明显感觉到原生的效果一闪而过。我们可以尝试自己使用CSS去美化使用的Checkbox和Radio.
-                </section>
-                <section class="widget-footer">
-                    <a class="btn" href="">阅读全文</a>
-                </section>
-            </article>
+                <article class="widget">
+                    <header class="widget-header">
+                        <h2 class="widget-title">
+                        <a href="{{url}}">{{{title}}}</a>
+                    </h2>
+                        <div class="widget-meta">
+                            <span>发表于{{date format='YYYY-MM-DD'}}</span>
+                            <span class="divider">/</span>
+                            <span>180条评论</span>
+                        </div>
+                        <div class="hr-line"></div>
+                    </header>
+                    <section class="widget-body">
+                    {{excerpt}}
+                    </section>
+                    <section class="widget-footer">
+                        <a class="btn" href="{{url}}">阅读全文</a>
+                    </section>
+                </article>
             {{/foreach}}
-            <div class="pager">
-                <div class="pager-prev">
-                    <a href="">
-                        <span class="pager-prev-arrow">
-                        <i class="fa fa-angle-left"></i>
-                    </span>
-                        <span>上一页</span>
-                    </a>
-                </div>
-                <div class="pager-current">
-                    <a href="">1/10页</a>
-                </div>
-                <div class="pager-next">
-                    <a href="">
-                        <span>下一页</span>
-                        <span class="pager-next-arrow">
-                        <i class="fa fa-angle-right"></i>
-                    </span>
-                    </a>
-                </div>
-            </div>
+            
+            {{pagination}}
         </div>
     </div>
 </section>

@@ -19,8 +19,10 @@
 	}
 	
 	.widget-body{
-		>a{
-			margin-right: 10px;
+		a{
+			padding: 3px;
+			margin-right: 15px;
+			border-bottom: 1px solid $link-color;
 		}
 	}
 }

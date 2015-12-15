@@ -41,7 +41,7 @@ var src = (function () {
             vendor: []
         },
         js: {
-            main: ['assets/src/js/main.js'],
+            main: ['assets/src/js/page.js','assets/src/js/control.js'],
             vendor: ['assets/vendors/jquery-2.1.4.min.js']
         },
         image: {
@@ -81,9 +81,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-    gulp.src(src.js.vendor)
+    gulp.src(src.js.main)
         .pipe(plumber())
-        .pipe(addSrc(src.js.main))
         .pipe(concat(pkg.name + '.min.js'))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
