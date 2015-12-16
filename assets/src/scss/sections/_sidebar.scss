@@ -14,13 +14,10 @@
 	width: 300px; 
 	
 	text-align: center;
-	background: #262a30;
+	background: #3B5998;
+	color: #839ccf;
 	
 	transition: right 200ms;
-	
-	.fa{
-		margin-right: 5px;
-	}
 }
 
 .sidebar-inner{
@@ -31,73 +28,47 @@
 	.site-author-avatar{
 		display: block;
 		margin: 0 auto;
-		max-width: 96px;
-		height: auto;
-		border: 2px solid #333;
-		padding: 2px;
+		width: 86px;
+		border: 10px solid #839ccf;
+		padding: 1px;
+		border-radius: 96px;
 	}
 	.site-author-name{
-		color: #fff;
+		color: #839ccf;
 		text-align: center;
+		font-size: 18px;
+		line-height: 60px;
 	}
-}
-
-.site-description{
-	margin-top: 5px; 
-	margin-bottom: 15px;
-}
-
-.site-state{
-	margin: 20px 0;
-	padding: 0;
-	list-style: none;
-	
-	
-	>li{
-		display: inline-block;
-		padding-left: 15px;
-		padding-right: 15px;
-		border-right: 1px solid $link-color;
-		&:last-child{
-			border-right: none;
-		}
-		
-		>a{
-			display: inline-block;
-			color: $link-color;
-			text-decoration: none;
-		}
-		
+	.site-author-location{
+		margin-bottom: 20px;
 	}
-	
-	.site-state-count,
-	.site-state-name{
-		display: block;
-		line-height: 1.5;
-	}
-}
-
-.site-feed{
-	border-top: 1px dotted $link-color;
-	border-bottom: 1px dotted $link-color;
-	
-	a{
-		text-decoration: none;
-		color: #62a8ea;
+	.site-author-bio{
+		padding: 20px 0;
+		border-top: 1px solid #839ccf;
+		border-bottom: 1px solid #839ccf;
 	}
 }
 
 .site-social{
-	@include clearfix;
 	margin: 20px 0;
 	padding: 0;
 	>li{
-		display: block;
-		width: 33.3333%;
-		float: left;
+		display: inline-block;
 		>a{
+			display: inline-block;
+			height: 35px; 
+			width: 35px; 
+			line-height: 35px;
+			text-align: center;
 			text-decoration: none;
-			color: $link-color;
+			
+			border:1px solid #fff;
+			color: #fff;
+			
+			&:hover{
+				background: #fff;
+				color: #3B5998;
+			}
 		}
 	}
 }
