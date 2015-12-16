@@ -1,20 +1,22 @@
 (function ($) {
-	var postTotals = (function () {
-		var total = 0;
-		$('#TagCloud>a').each(function () {
-			total += $(this).data('posts-count');
-		});
-		return total;
-	} ());
+	$.get(ghost.url.api('posts', { fields: "id" })).done(function (data) {
+		var postCount = data.posts.length;
+		$('[data-toggle="postcount"]').text(postCount);
+	}).fail(function (err) {
+		console.log(err);
+	});
 
-	$('#TagsCount').text(postTotals);
+	$.get(ghost.url.api('tags', { fields: "id" })).done(function (data) {
+		var tagCount = data.tags.length;
+		$('[data-toggle="tagcount"]').text(tagCount);
+	}).fail(function (err) {
+		console.log(err);
+	});
 
-	// $('#TagCloud>a').each(function () {
-	// 	var $this = $(this),
-	// 		postCount = $(this).data('posts-count');
-	// 	console.log(parseInt('55595c',10));
-	// 	console.log();
-	// 	$this.css('font-size',Math.floor(12+(postCount/postTotals)*12)+'px');
-	// 	$this.css('color')
-	// });
+	$.get(ghost.url.api('users', { fields: "id" })).done(function (data) {
+		var userCount = data.users.length;
+		$('[data-toggle="usercount"]').text(userCount);
+	}).fail(function (err) {
+		console.log(err);
+	});
 } (jQuery));
