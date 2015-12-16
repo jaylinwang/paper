@@ -37,12 +37,10 @@ var src = (function () {
             files: ['assets/src/scss/**/**']
         },
         css: {
-            main: [],
-            vendor: []
+            main: []
         },
         js: {
-            main: ['assets/src/js/page.js','assets/src/js/control.js'],
-            vendor: ['assets/vendors/jquery-2.1.4.min.js']
+            main: ['assets/src/js/page.js','assets/src/js/control.js']
         },
         image: {
             files: ['assets/src/images/**/**']

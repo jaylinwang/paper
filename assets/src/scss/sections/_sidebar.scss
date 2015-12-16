@@ -14,8 +14,8 @@
 	width: 300px; 
 	
 	text-align: center;
-	background: #3B5998;
-	color: #839ccf;
+	background: $brand-primary;
+	color: $sidebar-color;
 	
 	transition: right 200ms;
 }
@@ -29,12 +29,12 @@
 		display: block;
 		margin: 0 auto;
 		width: 86px;
-		border: 10px solid #839ccf;
+		border: 10px solid $sidebar-color;
 		padding: 1px;
 		border-radius: 96px;
 	}
 	.site-author-name{
-		color: #839ccf;
+		color: $sidebar-color;
 		text-align: center;
 		font-size: 18px;
 		line-height: 60px;
@@ -44,8 +44,8 @@
 	}
 	.site-author-bio{
 		padding: 20px 0;
-		border-top: 1px solid #839ccf;
-		border-bottom: 1px solid #839ccf;
+		border-top: 1px solid $sidebar-color;
+		border-bottom: 1px solid $sidebar-color;
 	}
 }
 
@@ -67,7 +67,7 @@
 			
 			&:hover{
 				background: #fff;
-				color: #3B5998;
+				color: $brand-primary;
 			}
 		}
 	}

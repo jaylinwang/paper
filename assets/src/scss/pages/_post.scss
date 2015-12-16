@@ -4,7 +4,7 @@
 		
 		.hr-line{
 			&:after{
-				background: #c8c8c8 none repeat scroll 0 0;
+				background: $gray;
 				content: "";
 				height: 3px;
 				margin: auto;
@@ -66,5 +66,14 @@
 	.post-next{
 		text-align: right;
 		border-left: 1px solid #e3e3e3;
+	}
+}
+
+.post-comment{
+	padding: 30px;
+	background: #fff;
+	
+	.ds-current{
+		border-radius: 0;
 	}
 }
