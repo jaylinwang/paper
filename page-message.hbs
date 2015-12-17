@@ -1,0 +1,26 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{#post}}
+<section class="main">
+	<div class="main-inner">
+		<div class="content">
+			<article class="widget message">
+				<header class="widget-header">
+					<h2 class="widget-title">
+						留言板
+					</h2>
+					<div class="hr-line"></div>
+				</header>
+				<section class="widget-body">
+					{{content}}
+				</section>
+				<section class="widget-footer">
+					<!-- 多说评论框 start -->
+					<div class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
+					<!-- 多说评论框 end -->	
+				</section>
+			</article>
+		</div>
+	</div>
+</section>
+{{/post}}

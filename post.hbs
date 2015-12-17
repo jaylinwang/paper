@@ -16,9 +16,9 @@
                     <div class="widget-meta">
                         <span>发表于{{date format='YYYY-MM-DD'}}</span>
                         <span class="divider">/</span>
-                        <span>
+                        <a href="{{url}}#Comment">
                             <span class="ds-thread-count" data-thread-key="{{uuid}}" data-count-type="comments"></span>
-                        </span>
+                        </a>
                     </div>
                     <div class="hr-line"></div>
                 </header>
@@ -59,7 +59,7 @@
                     {{/next_post}}
                 </div>
             </div>
-            <div class="post-comment">
+            <div class="post-comment" id="Comment">
                 <!-- 多说评论框 start -->
                 <div class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
                 <!-- 多说评论框 end -->

@@ -4,7 +4,7 @@
 		
 		.hr-line{
 			&:after{
-				background: #c8c8c8 none repeat scroll 0 0;
+				background: $gray;
 				content: "";
 				height: 3px;
 				margin: auto;
