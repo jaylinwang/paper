@@ -1,6 +1,7 @@
 .widget{
 	background: #fff;
 	margin-bottom: 30px;
+	border:1px solid #E6E6E6;
 }
 .widget-header{
 	padding-top: 30px; 
@@ -10,7 +11,7 @@
 	.hr-line {
 		margin-top: 25px;
 		border: 0;
-		border-top: 1px solid #e0e0e0;
+		border-top: 1px solid #00A9EC;
 		position: relative;
 	}
 }
@@ -19,7 +20,7 @@
 	margin-top: 0;
 	margin-bottom: 10px; 
 	a{
-		color: darken($link-color,10%);
+		color: black;
 	}
 	a:hover{
 		border-bottom: 1px dashed #c8c8c8;
