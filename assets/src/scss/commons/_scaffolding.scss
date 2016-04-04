@@ -1,26 +1,27 @@
-html{
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-body{
-	min-height: 100%;
-	position: relative;
-	font-family: $font-family-serif;
-	font-size: 14px;
-	color: $body-color;
-	line-height:2;
-	background: $body-bg;
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-a{
-	cursor: pointer;
-	text-decoration: none; 
-	color: $link-color;
+body {
+  min-height: 100%;
+  position: relative;
+  font-family: $font-family-serif;
+  font-size: 14px;
+  color: $body-color;
+  line-height: 2;
+  background: $body-bg;
 }
 
-ul{
-	list-style: none; 
-	padding: 0; 
-	margin: 0;
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $link-color;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

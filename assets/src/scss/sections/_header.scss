@@ -1,146 +1,148 @@
-.header{
-	position: relative;
-	background: #fff;
-	border-bottom: 1px solid #ebebeb;
-	margin-bottom: 40px;
+.header {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 40px;
 }
 
-.header-inner{
-	@include clearfix;
-	
-	margin-left: auto;
-	margin-right: auto;
-	padding: 30px 20px;
-	
-	line-height: 28px;
-	
-	@media (min-width: $screen-lg-min){
-		width: $inner-width-wide; 
-	}
-}	
+.header-inner {
+  @include clearfix;
 
-.site-meta{
-	float: left;
-	position: relative;
-	overflow: hidden;
-	
-	padding-left: 10px;
-	padding-right: 10px; 
-	
-	@media (min-width: $screen-lg-min){
-		&::before{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			
-			
-			height: 2px;
-			width: 100%;
-			background: #555;
-			
-			animation: xshow-right 0.5s;
-			
-			
-		}
-		&::after{
-			content: '';
-			display: block;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			
-			
-			height: 2px;
-			width: 100%;
-			background: #555;
-			
-			animation: xshow-left 0.5s;
-		}
-	}
-		
-	.brand{
-		position: relative;
-		padding: 8px 0;
-		
-		font-size: 24px;
-		font-weight: bold;
-		color: #3b3b3b;
-		text-align: center;
-	}
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 20px;
+
+  line-height: 28px;
+
+  @media (min-width: $screen-lg-min) {
+    width: $inner-width-wide;
+  }
 }
 
-@keyframes xshow-left{
-	from{
-		transform: translateX(-100%);
-	}
-	to{
-		transform: translateX(0);
-	}
-}
-@keyframes xshow-right{
-	from{
-		transform: translateX(100%);
-	}
-	to{
-		transform: translateX(0);
-	}
+.site-meta {
+  float: left;
+  position: relative;
+  overflow: hidden;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $screen-lg-min) {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 2px;
+      width: 100%;
+      background: #555;
+
+      animation: xshow-right 0.5s;
+
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      height: 2px;
+      width: 100%;
+      background: #555;
+
+      animation: xshow-left 0.5s;
+    }
+  }
+
+  .brand {
+    position: relative;
+    padding: 8px 0;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b3b3b;
+    text-align: center;
+
+    a {
+      color: #3b3b3b;
+    }
+  }
 }
 
-.site-nav{
-	float: right;
-	ul{
-		margin-top: 8px;
-		>li{
-			display: inline-block;
-		}
-		>li>a{
-			display: inline-block;
-			padding: 2px 10px;
-			
-			vertical-align: middle;
-			text-decoration: none;
-			color: $link-color;
-			border-bottom: 2px solid transparent;
-			
-			&:hover{
-				color: darken($link-color, 50%);
-				border-bottom-color: $link-color;
-			}
-		}
-	}
+@keyframes xshow-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-@media (max-width: $screen-sm-max){
-	.site-nav{
-		float: none;
-		display: none;
-		border-top: 1px solid $gray-light;
-		transition: margin-top 200ms;
-		&.open{
-			display: block;
-			margin-top: 10px;
-		}
-	}
+@keyframes xshow-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.site-nav-toggle{
-	text-align: right;
-	button{
-		padding: 4px 8px;
-		background: none; 
-		border: none;
-		.btn-bar{
-			display: block;
-			width: 30px;
-			height: 2px; 
-			margin: 6px 0;
-			background: $link-color;	
-		}
-	}
-	
-	@media (min-width: $screen-md-min){
-		display: none;
-	}
+.site-nav {
+  float: right;
+  ul {
+    margin-top: 8px;
+    > li {
+      display: inline-block;
+    }
+    > li > a {
+      display: inline-block;
+      padding: 2px 10px;
+
+      vertical-align: middle;
+      text-decoration: none;
+      color: $link-color;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: darken($link-color, 50%);
+        border-bottom-color: $link-color;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .site-nav {
+    float: none;
+    display: none;
+    border-top: 1px solid $gray-light;
+    transition: margin-top 200ms;
+    &.open {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.site-nav-toggle {
+  text-align: right;
+  button {
+    padding: 4px 8px;
+    background: none;
+    border: none;
+    .btn-bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin: 6px 0;
+      background: $link-color;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
 }

@@ -1,79 +1,81 @@
-.post{
-	.widget-header{
-		text-align: center;
-		
-		.hr-line{
-			&:after{
-				background: $gray;
-				content: "";
-				height: 3px;
-				margin: auto;
-				
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: -2px;
-				width: 45px;
-			}
-		}
-	}
-}
-.post-tags{
-	margin: 0 auto;
-	text-align: center;
-	>li{
-		display: inline-block;
-		padding: 5px 10px;
-	}
-	>li>a{
-		border-bottom: 1px dotted transparent;
-		&:before{
-			content: '#';
-		}
-		
-		&:hover{
-			color: $link-hover-color;
-			border-bottom: 1px dotted $link-hover-color;
-		}
-	}
-}
-.post-navigation{
-	display: table;
-	width: 100%;
-	margin: 30px 0;
-	
-	background: #fff;
-	
-	a{
-		padding: 10px;
-		text-decoration: none;
-		color: $link-color;
-		text-align: center;
-		
-		span{
-			padding: 10px;
-		}
-	}
-	
-	.post-prev,
-	.post-next{
-		display: table-cell;
-		width: 50%;
-		height: 60px;
-		line-height: 60px;
-	}
-	
-	.post-next{
-		text-align: right;
-		border-left: 1px solid #e3e3e3;
-	}
+.post {
+  .widget-header {
+    text-align: center;
+
+    .hr-line {
+      &:after {
+        background: $gray;
+        content: "";
+        height: 3px;
+        margin: auto;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -2px;
+        width: 45px;
+      }
+    }
+  }
 }
 
-.post-comment{
-	padding: 30px;
-	background: #fff;
-	
-	.ds-current{
-		border-radius: 0;
-	}
+.post-tags {
+  margin: 0 auto;
+  text-align: center;
+  > li {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  > li > a {
+    border-bottom: 1px dotted transparent;
+    &:before {
+      content: '#';
+    }
+
+    &:hover {
+      color: $link-hover-color;
+      border-bottom: 1px dotted $link-hover-color;
+    }
+  }
+}
+
+.post-navigation {
+  display: table;
+  width: 100%;
+  margin: 30px 0;
+
+  background: #fff;
+
+  a {
+    padding: 10px;
+    text-decoration: none;
+    color: $link-color;
+    text-align: center;
+
+    span {
+      padding: 10px;
+    }
+  }
+
+  .post-prev,
+  .post-next {
+    display: table-cell;
+    width: 50%;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .post-next {
+    text-align: right;
+    border-left: 1px solid #e3e3e3;
+  }
+}
+
+.post-comment {
+  padding: 30px;
+  background: #fff;
+
+  .ds-current {
+    border-radius: 0;
+  }
 }
