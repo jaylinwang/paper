@@ -71,7 +71,7 @@ var showTime = function (Counter) {
     if (AV) {
         $('.visit-wrapper').show();
         var Counter = AV.Object.extend('Counter');
-        showTime(Counter);
         updateCounter(Counter);
+        showTime(Counter);
     }
 }(jQuery));
