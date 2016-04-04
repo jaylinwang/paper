@@ -5,81 +5,94 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-<section class="main">
-    <div class="main-inner">
-        <div class="content">
-            <article class="widget post">
-                <header class="widget-header">
-                    <h2 class="widget-title">
-                        <a>{{title}}</a>
-                    </h2>
-                    <div class="widget-meta">
-                        <span>发表于{{date format='YYYY-MM-DD'}}</span>
-                        <span class="divider">/</span>
-                        <a href="{{url}}#Comment">
-                            <span class="ds-thread-count" data-thread-key="{{uuid}}" data-count-type="comments"></span>
-                        </a>
-                    </div>
-                    <div class="hr-line"></div>
-                </header>
-                <section class="widget-body">
-                   {{content}}
-                </section>
-                <section class="widget-footer">  
-                     {{#if tags}}
-                        <ul class="post-tags">
-                        {{#foreach tags}}
-                            <li>
-                                <a href="{{url}}" title="{{name}}">{{name}}</a>
-                            </li>  
-                        {{/foreach}}
-                        </ul>
-                      {{/if}}        
-                      <div class="ds-share flat" data-thread-key="{{uuid}}" data-title="{{title}}" data-images="{{image}}" data-content="{{except}}" data-url="{{url absolute="true"}}">
-                        <div class="ds-share-inline">
-                        <ul  class="ds-share-icons-16">
-                            
-                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-                            <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                            <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-                            <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-                            <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                            
-                        </ul>
-                        <div class="ds-share-icons-more">
+    <section class="main">
+        <div class="main-inner">
+            <div class="content">
+                <article class="widget post">
+                    <header class="widget-header">
+                        <h2 class="widget-title">
+                            <a>{{title}}</a>
+                        </h2>
+                        <div class="widget-meta">
+                            <span>发表于{{date format='YYYY-MM-DD'}}</span>
+                            <span class="visit-wrapper" style="display: none">
+                                <span class="divider">/</span>
+                                <span class="visit" data-url="{{url}}">
+                                    <span class="visit-text">阅读次数</span>
+                                    <span class="visit-count">0</span>
+                                </span>
+                            </span>
+                            <span class="divider">/</span>
+                            <a href="{{url}}#Comment">
+                                <span class="ds-thread-count" data-thread-key="{{uuid}}"
+                                      data-count-type="comments"></span>
+                            </a>
                         </div>
+                        <div class="hr-line"></div>
+                    </header>
+                    <section class="widget-body">
+                        {{content}}
+                    </section>
+                    <section class="widget-footer">
+                        {{#if tags}}
+                            <ul class="post-tags">
+                                {{#foreach tags}}
+                                    <li>
+                                        <a href="{{url}}" title="{{name}}">{{name}}</a>
+                                    </li>
+                                {{/foreach}}
+                            </ul>
+                        {{/if}}
+                        <div class="ds-share flat" data-thread-key="{{uuid}}" data-title="{{title}}"
+                             data-images="{{image}}" data-content="{{except}}" data-url="{{url absolute="true"}}">
+                            <div class="ds-share-inline">
+                                <ul class="ds-share-icons-16">
+
+                                    <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a>
+                                    </li>
+                                    <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                                    <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a>
+                                    </li>
+                                    <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+                                    <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a>
+                                    </li>
+
+                                </ul>
+                                <div class="ds-share-icons-more">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </article>
-            <div class="post-navigation">
-                <div class="post-prev">
-                    {{#prev_post}}
-                    <a href="{{url}}">
+                    </section>
+                </article>
+                <div class="post-navigation">
+                    <div class="post-prev">
+                        {{#prev_post}}
+                            <a href="{{url}}">
                         <span class="pager-prev-arrow">
                             <i class="fa fa-angle-left"></i>
                         </span>
-                        <span>{{title}}</span>
-                    </a>
-                    {{/prev_post}}
-                </div>
-                <div class="post-next">
-                    {{#next_post}}
-                    <a href="{{url}}">
-                        <span>{{title}}</span>
+                                <span>{{title}}</span>
+                            </a>
+                        {{/prev_post}}
+                    </div>
+                    <div class="post-next">
+                        {{#next_post}}
+                            <a href="{{url}}">
+                                <span>{{title}}</span>
                         <span class="pager-next-arrow">
                             <i class="fa fa-angle-right"></i>
                         </span>
-                    </a>
-                    {{/next_post}}
+                            </a>
+                        {{/next_post}}
+                    </div>
+                </div>
+                <div class="post-comment" id="Comment">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}"
+                         data-url="{{url absolute="true"}}"></div>
+                    <!-- 多说评论框 end -->
                 </div>
             </div>
-            <div class="post-comment" id="Comment">
-                <!-- 多说评论框 start -->
-                <div class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
-                <!-- 多说评论框 end -->
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 {{/post}}

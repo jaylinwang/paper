@@ -2,38 +2,38 @@
 <html>
 <head>
     {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    <meta name="description" content="{{meta_description}}"/>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "dist/css/onepice.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "dist/css/onepice.min.css"}}"/>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body>
-	<div class="body-inner">
-        {{> sections/header}}
-        {{{body}}}
-        {{> sections/control}}
-        {{> sections/sidebar}}
-        {{> sections/footer}}
-	</div>
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-        <script type="text/javascript" src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-    
-    {{!--vendors--}}
-    <script type="text/javascript" src="{{asset "vendors/highlight.js"}}"></script>
-    <script type="text/javascript" src="{{asset "dist/js/onepice.min.js"}}"></script>
+<div class="body-inner">
+    {{> sections/header}}
+    {{{body}}}
+    {{> sections/control}}
+    {{> sections/sidebar}}
+    {{> sections/footer}}
+</div>
+{{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+<script type="text/javascript" src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{!--vendors--}}
+<script type="text/javascript" src="{{asset "vendors/highlight.js"}}"></script>
+<script type="text/javascript" src="{{asset "dist/js/onepice.min.js"}}"></script>
 </body>
 </html>

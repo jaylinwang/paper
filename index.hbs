@@ -8,19 +8,27 @@
                 <article class="widget">
                     <header class="widget-header">
                         <h2 class="widget-title">
-                        <a href="{{url}}">{{{title}}}</a>
-                    </h2>
+                            <a href="{{url}}">{{{title}}}</a>
+                        </h2>
                         <div class="widget-meta">
                             <span>发表于{{date format='YYYY-MM-DD'}}</span>
+                            <span class="visit-wrapper" style="display: none">
+                                <span class="divider">/</span>
+                                <span class="visit" data-url="{{url}}">
+                                    <span class="visit-text">阅读次数</span>
+                                    <span class="visit-count">0</span>
+                                </span>
+                            </span>
                             <span class="divider">/</span>
                             <a href="{{url}}#Comment">
-                                <span class="ds-thread-count" data-thread-key="{{uuid}}" data-count-type="comments"></span>
+                                <span class="ds-thread-count" data-thread-key="{{uuid}}"
+                                      data-count-type="comments"></span>
                             </a>
                         </div>
                         <div class="hr-line"></div>
                     </header>
                     <section class="widget-body">
-                    {{excerpt}}
+                        {{excerpt}}
                     </section>
                     <section class="widget-footer">
                         <a class="btn" href="{{url}}">阅读全文</a>
