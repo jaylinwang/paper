@@ -66,24 +66,24 @@
                 </article>
                 <div class="post-navigation">
                     <div class="post-prev">
-                        {{#prev_post}}
-                            <a href="{{url}}">
-                        <span class="pager-prev-arrow">
-                            <i class="fa fa-angle-left"></i>
-                        </span>
-                                <span>{{title}}</span>
-                            </a>
-                        {{/prev_post}}
-                    </div>
-                    <div class="post-next">
                         {{#next_post}}
                             <a href="{{url}}">
+                                <span class="pager-prev-arrow">
+                                    <i class="fa fa-angle-left"></i>
+                                </span>
                                 <span>{{title}}</span>
-                        <span class="pager-next-arrow">
-                            <i class="fa fa-angle-right"></i>
-                        </span>
                             </a>
                         {{/next_post}}
+                    </div>
+                    <div class="post-next">
+                        {{#prev_post}}
+                            <a href="{{url}}">
+                                <span>{{title}}</span>
+                                <span class="pager-next-arrow">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                            </a>
+                        {{/prev_post}}
                     </div>
                 </div>
                 <div class="post-comment" id="Comment">

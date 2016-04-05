@@ -17,6 +17,36 @@
       }
     }
   }
+
+  blockquote {
+    position: relative;
+    background: #f4f4f4;
+    margin: 0;
+    padding: .1em 1em;
+
+    &:before {
+      position: absolute;
+      content: ' ';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 4px;
+      background: #e4e4e4;
+    }
+  }
+
+  ul {
+    list-style: disc inside;
+  }
+
+  p{
+    code{
+      padding: 2px 4px;
+      border-radius: 1px;
+      background: #f4f4f4;
+    }
+  }
 }
 
 .post-tags {
