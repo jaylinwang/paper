@@ -5,7 +5,7 @@
     <div class="main-inner">
         <div class="content">
             {{#foreach posts}}
-                <article class="widget">
+                <article class="widget post widget-excerpt">
                     <header class="widget-header">
                         <h2 class="widget-title">
                             <a href="{{url}}">{{{title}}}</a>
@@ -26,19 +26,11 @@
                                         data-count-type="comments"></span>
                                 </a>
                             </span>
-                            <span id="disqus_thread_count"  style="display:none">
-                                <span class="divider">/</span>
-                                <!--<a href="{{url}}#Comment">
-                                    <span class="ds-thread-count" data-thread-key="{{uuid}}"
-                                        data-count-type="comments"></span>
-                                </a>-->
-                                <a href="{{url}}#disqus_thread"></a>
-                            </span>
                         </div>
                         <div class="hr-line"></div>
                     </header>
                     <section class="widget-body">
-                        {{excerpt}}
+                       {{content}}
                     </section>
                     <section class="widget-footer">
                         <a class="btn" href="{{url}}">阅读全文</a>

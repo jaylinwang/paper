@@ -20,5 +20,4 @@
     $(document).on('click.totopToggle', totopToggle, toTop);
     $(document).on('click.sidebarToggle', sidebarToggle, toggleSidebar);
     $(document).on('click.menuToggle', menuToggle, toggleMenu);
-    
 }(jQuery));

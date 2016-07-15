@@ -80,4 +80,5 @@ var showTime = function(Counter) {
         updateCounter(Counter);
         showTime(Counter);
     }
+    console.log($('.widget-excerpt .more').closest('p').nextAll().remove());
 }(jQuery));

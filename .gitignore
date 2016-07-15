@@ -12,7 +12,7 @@ desktop.ini
 
 .vscode
 
-partials/config.hbs
-
+partials/custom/config.hbs
+partials/custom/socials.hbs
 
 
