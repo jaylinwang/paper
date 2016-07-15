@@ -15,9 +15,11 @@
 					{{content}}
 				</section>
 				<section class="widget-footer">
-					<!-- 多说评论框 start -->
-					<div class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
-					<!-- 多说评论框 end -->	
+                    <!-- 多说评论框 start -->
+                    <div id="duoshuo_thread" class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}" style="display:none"></div>
+                    <!-- 多说评论框 end -->
+
+                    <div id="disqus_thread" style="display:none"></div>
 				</section>
 			</article>
 		</div>

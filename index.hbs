@@ -19,11 +19,21 @@
                                     <span class="visit-count">0</span>
                                 </span>
                             </span>
-                            <span class="divider">/</span>
-                            <a href="{{url}}#Comment">
-                                <span class="ds-thread-count" data-thread-key="{{uuid}}"
-                                      data-count-type="comments"></span>
-                            </a>
+                            <span id="duoshuo_thread_count" style="display:none">
+                                <span class="divider">/</span>
+                                <a href="{{url}}#Comment">
+                                    <span class="ds-thread-count" data-thread-key="{{uuid}}"
+                                        data-count-type="comments"></span>
+                                </a>
+                            </span>
+                            <span id="disqus_thread_count"  style="display:none">
+                                <span class="divider">/</span>
+                                <!--<a href="{{url}}#Comment">
+                                    <span class="ds-thread-count" data-thread-key="{{uuid}}"
+                                        data-count-type="comments"></span>
+                                </a>-->
+                                <a href="{{url}}#disqus_thread"></a>
+                            </span>
                         </div>
                         <div class="hr-line"></div>
                     </header>

@@ -10,5 +10,9 @@ desktop.ini
 
 .idea
 
+.vscode
+
+partials/config.hbs
+
 
 

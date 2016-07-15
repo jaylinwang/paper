@@ -32,8 +32,13 @@
 {{! Ghost outputs important scripts and data with this tag }}
 {{ghost_foot}}
 
+{{> config}}
+
 {{!--vendors--}}
 <script type="text/javascript" src="{{asset "vendors/highlight.js"}}"></script>
+<script type="text/javascript" src="{{asset "vendors/av-min-1.0.0.js"}}"></script>
 <script type="text/javascript" src="{{asset "dist/js/onepice.min.js"}}"></script>
+{{> scripts/comment }}
+
 </body>
 </html>
