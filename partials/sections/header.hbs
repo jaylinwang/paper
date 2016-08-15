@@ -1,21 +1,14 @@
-<header class="header">
-    <div class="header-inner">
-        <div class="site-meta">
-            <div class="brand">
-                <div class="brand-before-line"></div>
-                <a href="/">{{@blog.title}}</a>
-                <div class="brand-before-line"></div>
-            </div>
+{{!--header--}}
+<header>
+    <div class="header-wrapper">
+        <div class="brand">
+            <a class="logo" href="/">
+                {{@blog.title}}
+            </a>
+            <span class="desc">
+                {{@blog.description}}
+            </span>
         </div>
-        <div class="site-nav-toggle">
-            <button data-toggle="menu" data-target="#SiteMenu">
-                <span class="btn-bar"></span>
-                <span class="btn-bar"></span>
-                <span class="btn-bar"></span>
-            </button>
-        </div>
-        <div class="site-nav" id="SiteMenu">
-            {{navigation}}
-        </div>
+        {{!--nav--}}
     </div>
 </header>

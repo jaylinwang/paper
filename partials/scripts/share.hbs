@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    if (onepice_config.share.enable) {
+        if (onepice_config.share.duoshuo && onepice_config.share.duoshuo.enable) {
+            $('#duoshuo_share').show();
+        };
+        if (onepice_config.share.bdshare && onepice_config.share.bdshare.enable) {
+            $('#bd_share').show();
+            window._bd_share_config = {
+                "common": {
+                    "bdMini": "2",
+                    "bdMiniList": false,
+                    "bdStyle": "1",
+                    "bdSize": "16",
+                    "bdText": $('#bd_share').data('text'),
+                    "bdDesc": $('#bd_share').data('desc'),
+                    "bdUrl": $('#bd_share').data('url'),
+                    "bdPic": $('#bd_share').data('pic'),
+                },
+                "share": {
+                    "bdSize": 16
+                },
+                "image": {
+                    "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+                    "viewText": "分享到：",
+                    "viewSize": "16"
+                },
+                "selectShare": {
+                    "bdContainerClass": null,
+                    "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+                }
+            };
+            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+        };
+    }
+</script>

@@ -1,44 +1,29 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-<section class="main">
-    <div class="main-inner">
-        <div class="content">
-            {{#foreach posts}}
-                <article class="widget post widget-excerpt">
-                    <header class="widget-header">
-                        <h2 class="widget-title">
-                            <a href="{{url}}">{{{title}}}</a>
-                        </h2>
-                        <div class="widget-meta">
-                            <span>发表于{{date format='YYYY-MM-DD'}}</span>
-                            <span class="visit-wrapper" style="display: none">
-                                <span class="divider">/</span>
-                                <span class="visit" data-url="{{url}}">
-                                    <span class="visit-text">阅读次数</span>
-                                    <span class="visit-count">0</span>
-                                </span>
-                            </span>
-                            <span id="duoshuo_thread_count" style="display:none">
-                                <span class="divider">/</span>
-                                <a href="{{url}}#Comment">
-                                    <span class="ds-thread-count" data-thread-key="{{uuid}}"
-                                        data-count-type="comments"></span>
-                                </a>
-                            </span>
-                        </div>
-                        <div class="hr-line"></div>
-                    </header>
-                    <section class="widget-body">
-                       {{content}}
-                    </section>
-                    <section class="widget-footer">
-                        <a class="btn" href="{{url}}">阅读全文</a>
-                    </section>
-                </article>
-            {{/foreach}}
+<section class="main home">
+    <div class="content">
+        {{#foreach posts}}
+            <article class="widget post widget-excerpt">
+                <header class="widget-header">
+                    <h2 class="widget-title">
+                        <a href="{{url}}">{{{title}}}</a>
+                    </h2>
+                    <div class="widget-meta">
+                        <span>
+                            <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
+                        </span>
+                    </div>
+                </header>
+                <section class="widget-body">
+                    {{content}}
+                </section>
+                <section class="widget-footer">
+                    <a class="btn" href="{{url}}">阅读全文</a>
+                </section>
+            </article>
+        {{/foreach}}
 
-            {{pagination}}
-        </div>
+        {{pagination}}
     </div>
 </section>

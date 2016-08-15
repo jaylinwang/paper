@@ -14,7 +14,11 @@
                             <a>{{title}}</a>
                         </h2>
                         <div class="widget-meta">
-                            <span>发表于{{date format='YYYY-MM-DD'}}</span>
+                             <div class="widget-meta">
+                                <span>
+                                    <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
+                                </span>
+                            </div>
                             <span class="visit-wrapper" style="display: none">
                                 <span class="divider">/</span>
                                 <span class="visit" data-url="{{url}}">
@@ -83,7 +87,7 @@
                         {{#next_post}}
                             <a href="{{url}}">
                                 <span class="pager-prev-arrow">
-                                    <i class="fa fa-angle-left"></i>
+                                    <i class="ion-chevron-left"></i>
                                 </span>
                                 <span>{{title}}</span>
                             </a>
@@ -94,17 +98,16 @@
                             <a href="{{url}}">
                                 <span>{{title}}</span>
                                 <span class="pager-next-arrow">
-                                    <i class="fa fa-angle-right"></i>
+                                    <i class="ion-chevron-right"></i>
                                 </span>
                             </a>
                         {{/prev_post}}
                     </div>
                 </div>
-                <div class="post-comment" id="Comment">
+                <div class="post-comment" id="Comment" style="display:none">
                     <!-- 多说评论框 start -->
                     <div id="duoshuo_thread" class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}" style="display:none"></div>
                     <!-- 多说评论框 end -->
-
                     <div id="disqus_thread" style="display:none"></div>
                 </div>
             </div>

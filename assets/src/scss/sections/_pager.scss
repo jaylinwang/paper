@@ -1,44 +1,38 @@
 .pager {
-  @include clearfix;
-  text-align: center;
-  margin: 30px 0;
-
-  a {
-    position: relative;
-    padding: 10px;
-    text-decoration: none;
-    color: $link-color;
-    border: 1px solid #e3e3e3;
-    background: #fff;
-
+    @include clearfix;
     text-align: center;
-
-    span {
-      padding: 10px;
+    margin: 15px 0;
+    a {
+        position: relative;
+        padding: 8px;
+        text-decoration: none;
+        color: $link-color;
+        border: 1px solid #e3e3e3;
+        background: #fff;
+        text-align: center;
+        span {
+            padding: 8px;
+        }
     }
-  }
-
-  a.disabled {
-    cursor: not-allowed;
-  }
-
-  .pager-prev-arrow {
-    border-right: 1px solid #ddd;
-  }
-
-  .pager-next-arrow {
-    border-left: 1px solid #ddd;
-  }
+    a.disabled {
+        cursor: not-allowed;
+    }
+    .pager-prev-arrow {
+        border-right: 1px solid #e3e3e3;
+    }
+    .pager-next-arrow {
+        border-left: 1px solid #e3e3e3;
+    }
 }
 
 .pager-prev {
-  float: left;
+    float: left;
 }
 
 .pager-current {
-  display: inline-block;
+    display: inline-block;
 }
 
 .pager-next {
-  float: right;
+    float: right;
 }

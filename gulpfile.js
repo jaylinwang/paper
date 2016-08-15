@@ -40,7 +40,7 @@ var src = (function() {
             main: []
         },
         js: {
-            main: ['assets/src/js/page.js', 'assets/src/js/control.js']
+            main: ['assets/src/js/code.js', 'assets/src/js/count.js','assets/src/js/control.js']
         },
         image: {
             files: ['assets/src/images/**/**']
