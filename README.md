@@ -3,6 +3,16 @@ Ghost主题
 
 onepice是一款适用于ghost的博客主题。
 
+使用方式
+===
+
+克隆本主题到ghost程序目录下content/themes
+
+配置方式
+===
+
+参照config.example.js格式完成配置文件，填写至code injection>blog footer
+
 反馈
 ===
 
