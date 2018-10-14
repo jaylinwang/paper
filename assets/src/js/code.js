@@ -1,3 +1,0 @@
-(function ($) {
-  hljs.initHighlightingOnLoad();
-}(jQuery));

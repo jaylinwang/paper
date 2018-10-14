@@ -1,39 +1,23 @@
-<div class="pager">
-  <div class="pager-prev">
-    {{#if prev}}
-    <a href="{{page_url prev}}">
-      <span class="pager-prev-arrow">
-        <i class="ion-chevron-left"></i>
-      </span>
-      <span>上一页</span>
-    </a>
-    {{else}}
-    <a href="javascrip:void(0)" class="disabled">
-      <span class="pager-prev-arrow">
-        <i class="ion-chevron-left"></i>
-      </span>
-      <span>上一页</span>
-    </a>
-    {{/if}}
-  </div>
-  <div class="pager-current">
-    <a href="">{{page}}/{{pages}}页</a>
-  </div>
-  <div class="pager-next">
-    {{#if next}}
-    <a href="{{page_url next}}">
-      <span>下一页</span>
-      <span class="pager-next-arrow">
-        <i class="ion-chevron-right"></i>
-      </span>
-    </a>
-    {{else}}
-    <a href="javascrip:void(0)" class="disabled">
-      <span>下一页</span>
-      <span class="pager-next-arrow">
-        <i class="ion-chevron-right"></i>
-      </span>
-    </a>
-    {{/if}}
-  </div>
+<div class="page">
+<div class="page-wrapper">
+  {{#if prev}}
+  <a class="extend prev" rel="next" href="{{page_url prev}}">
+    <i class="iconfont icon-back"></i>
+  </a>
+  {{else}}
+  <a class="extend prev disabled" rel="next" href="javascript:void(0)">
+    <i class="iconfont icon-back"></i>
+  </a>
+  {{/if}}
+  <span class="page-block">{{page}} / {{pages}}</span>
+  {{#if next}}
+  <a class="extend next" rel="next" href="{{page_url next}}">
+    <i class="iconfont icon-enter"></i>
+  </a>
+  {{else}}
+  <a class="extend next disabled" rel="next" href="javascript:void(0)">
+    <i class="iconfont icon-enter"></i>
+  </a>
+  {{/if}}
+</div>
 </div>

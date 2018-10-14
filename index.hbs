@@ -1,27 +1,23 @@
 {{!< default}}
-<section class="main home">
-  <div class="content">
-    {{#foreach posts}}
-    <article class="widget post widget-excerpt">
-      <header class="widget-header">
-        <h2 class="widget-title">
-          <a href="{{url}}">{{{title}}}</a>
-        </h2>
-        <div class="widget-meta">
-          <span>
-            <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
-          </span>
-        </div>
-      </header>
-      <section class="widget-body">
-        {{excerpt}}
-      </section>
-      <section class="widget-footer">
-        <a class="btn" href="{{url}}">阅读全文</a>
-      </section>
-    </article>
-    {{/foreach}}
-
-    {{pagination}}
+<section class="main">
+<div class="article">
+  {{#foreach posts}}
+  <div class="article-wrapper">
+    <h2>
+      <a href="{{url}}">{{title}}</a>
+    </h2>
+    <div class="basic">
+      <ul>
+        <li><a href="javascript:void(0)">发布于{{date format='YYYY/MM/DD'}}</a></li>
+      </ul>
+    </div>
+    <div class="essential">
+      {{excerpt}}
+    </div>
+    <a class="readall" href="{{url}}">阅读全文</a>
   </div>
-  </section>
+  {{/foreach}}
+</div>
+{{ pagination }}
+</section>
+{{ side }}

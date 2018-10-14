@@ -1,41 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh_CN">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
-  <link rel="stylesheet" type="text/css" href="{{asset "dist/css/onepice.min.css"}}" />
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/onepice.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "vendors/share.min.css"}}" />
+
   {{ghost_head}}
-  <style>
-    .kg-width-wide {}
-    .kg-width-full {}
-    .kg-gallery-container {}
-    .kg-gallery-row {}
-    .kg-gallery-image {}
-  </style>
 </head>
 
 <body>
+  <div class="header">
+    <div class="header-wrapper">
+      <div class="brand">
+        <a href="/">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+        </a>
+      </div>
+      <div class="nav">
+        {{navigation}}
+      </div>
+      <div class="tool">
+        <ul>
+          <li data-toggle="startSearch">
+            <div><i class="iconfont icon-search"></i></div>
+            <div>搜索</div>
+          </li>
+        </ul>
+      </div>
+      <div class="search">
+        <div class="search-wrapper">
+          <div class="search-icon"><i class="iconfont icon-search"></i></div>
+          <div class="search-input">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form" target="_blank">
+              <input type="search" name="q" results="0" placeholder="站内搜索(谷歌)">
+              <input type="hidden" name="sitesearch" value="http://jaylin.wang">
+            </form>
+          </div>
+          <div class="search-close" data-toggle="closeSearch"><i class="iconfont icon-guanbifuzhi"></i></div>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-wrapper">
+      {{{body}}}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-wrapper">
+      <div class="sns">
+        {{!-- <ul>
+          <% if(theme.socials.weibo){ %>
+          <li>
+            <a href="<%= theme.socials.weibo %>" target="_blank"><i class="iconfont icon-weibo"></i></a>
+          </li>
+          <% } %>
+          <% if(theme.socials.github){ %>
+          <li>
+            <a href="<%= theme.socials.github %>" target="_blank"><i class="iconfont icon-github"></i></a>
+          </li>
+          <% } %>
+          <li>
+            <a href="<%= url_for('/atom.xml') %>" target="_blank"><i class="iconfont icon-rss"></i></a>
+          </li>
+        </ul> --}}
+      </div>
+    </div>
+    <div class="bottom-wrapper">
+      <div class="copy">
+        &copy; 2011~{{date now format="YYYY"}}
+        小林小记 |
+        蜀ICP备16028753号 |
+        基于ghost搭建
+      </div>
+    </div>
+  </div>
+  <script src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
+  <script src="{{asset "vendors/share.min.js"}}"></script>
+  <script src="{{asset "vendors/highlight.js"}}"></script>
+  <!-- share -->
+  <script>
+    var $config = {
+      sites: ['weibo', 'wechat', 'qzone', 'qq']
+    };
+    $('.social-share').share($config);
+  </script>
+  <!-- end share -->
 
-  {{> sections/header }}
-  {{> sections/nav }}
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?5638e2ceb09a10c160d902e9e8d53874";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 
-  {{{body}}}
-  {{> sections/footer}}
-
-  <script type="text/javascript" src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
-
-  {{ghost_foot}}
-
-  {{!--vendors--}}
-  <script type="text/javascript" src="{{asset "vendors/highlight.js"}}"></script>
-  <script type="text/javascript" src="{{asset "dist/js/onepice.min.js"}}"></script>
-  {{> scripts/comment }}
-  {{> scripts/share }}
-
+  {{#is post}}
+  <script type="text/javascript">
+    (function () {
+      var appid = 'cytiqJJex';
+      var conf = 'prod_13b3855b47186261ac5d515f4c1abd77';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) { window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
+    })(); </script>
+  {{/is}}
 </body>
 
 </html>

@@ -23,29 +23,32 @@ var PORT = {
 var dist = (function () {
   return {
     name: pkg.name,
-    css: 'assets/dist/css',
-    js: 'assets/dist/js',
-    image: 'assets/dist/images',
-    font: 'assets/dist/fonts'
+    css: 'assets/css',
+    js: 'assets/js',
+    image: 'assets/images',
+    font: 'assets/fonts',
+    vendor: 'assets/vendors',
   };
 }());
 
 var src = (function () {
   return {
     sass: {
-      main: 'assets/src/scss/main.scss',
-      files: ['assets/src/scss/**/**']
+      main: 'src/scss/app.scss',
+      files: ['src/scss/**/**']
     },
     css: {
       main: []
     },
     js: {
-      main: ['assets/src/js/code.js', 'assets/src/js/control.js']
+      main: ['src/js/common.js']
     },
     font: {
-      files: ['assets/src/fonts/**/**']
+      main: 'src/fonts/**/**'
+    },
+    vendor: {
+      main: 'src/vendors/**/**'
     }
-
   };
 }());
 
@@ -87,10 +90,14 @@ gulp.task('js', function () {
     .pipe(gulp.dest(dist.js));
 });
 
-gulp.task('font', function () {
-  gulp.src(src.font.files)
-    .pipe(gulp.dest(dist.font));
+gulp.task('vendor', function () {
+  gulp.src(src.vendor.main)
+    .pipe(gulp.dest(dist.vendor));
+});
 
+gulp.task('font', function () {
+  gulp.src(src.font.main)
+    .pipe(gulp.dest(dist.font));
 });
 
 gulp.task('server', function () {
@@ -99,7 +106,7 @@ gulp.task('server', function () {
   });
 });
 
-gulp.task('zip', ['css', 'js'], function () {
+gulp.task('zip', ['css', 'js', 'vendor', 'font'], function () {
   var targetDir = 'dist/';
   var themeName = require('./package.json').name;
   var filename = themeName + '.zip';
@@ -115,11 +122,12 @@ gulp.task('zip', ['css', 'js'], function () {
       .pipe(gulp.dest(targetDir));
 });
 
-gulp.task('build', ['css', 'js', 'font']);
+gulp.task('build', ['css', 'js', 'vendor', 'font']);
 
 gulp.task('default', function () {
   gulp.start(['build']);
   gulp.watch(src.js.main, ['js']);
   gulp.watch(src.sass.files, ['css']);
-  gulp.watch(src.font.files, ['font']);
+  gulp.watch(src.font.main, ['font']);
+  gulp.watch(src.vendor.main, ['vendor']);
 });

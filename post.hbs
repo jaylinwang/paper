@@ -1,108 +1,56 @@
 {{!< default}}
-  {{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
-  {{! Everything inside the #post tags pulls data from the post }} {{#post}} <section class="main">
-  <div class="main-inner">
-    <div class="content">
-      <article class="widget post">
-        <header class="widget-header">
-          <h2 class="widget-title">
-            <a>{{title}}</a>
-          </h2>
-          <div class="widget-meta">
-            <div class="widget-meta">
-              <span>
-                <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
-              </span>
-            </div>
-            <span class="visit-wrapper" style="display: none">
-              <span class="divider">/</span>
-              <span class="visit" data-url="{{url}}">
-                <span class="visit-text">阅读次数</span>
-                <span class="visit-count">0</span>
-              </span>
-            </span>
-            <span id="duoshuo_thread_count" style="display:none">
-              <span class="divider">/</span>
-              <a href="{{url}}#Comment">
-                <span class="ds-thread-count" data-thread-key="{{uuid}}" data-count-type="comments"></span>
-              </a>
-            </span>
-          </div>
-          <div class="hr-line"></div>
-        </header>
-        <section class="widget-body">
-          {{content}}
-        </section>
-        <section class="widget-footer">
-          {{#if tags}}
-          <ul class="post-tags">
-            {{#foreach tags}}
-            <li>
-              <a href="{{url}}" title="{{name}}">{{name}}</a>
-            </li>
-            {{/foreach}}
-          </ul>
-          {{/if}}
-          <div id="duoshuo_share" class="ds-share flat" data-thread-key="{{uuid}}" data-title="{{title}}" data-images="{{img_url}}"
-            data-content="{{excerpt}}" data-url="{{url absolute="true"}}" style="display:none">
-            <div class="ds-share-inline">
-              <ul class="ds-share-icons-16">
-
-                <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a>
-                </li>
-                <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a>
-                </li>
-                <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-                <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a>
-                </li>
-
-              </ul>
-              <div class="ds-share-icons-more">
-              </div>
-            </div>
-          </div>
-          <div class="bdsharebuttonbox" id="bd_share" data-text="{{title}}" data-desc="{{excerpt}}" data-url="{{url absolute="true"}}"
-            data-pic="{{img_url}}" style="display:none">
-            <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"> 新浪微博 </a>
-            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"> 腾讯微博 </a>
-            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"> QQ空间 </a>
-            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"> 微信 </a>
-          </div>
-        </section>
-      </article>
-      <div class="post-navigation">
-        <div class="post-prev">
-          {{#next_post}}
-          <a href="{{url}}">
-            <span class="pager-prev-arrow">
-              <i class="ion-chevron-left"></i>
-            </span>
-            <span>{{title}}</span>
-          </a>
-          {{/next_post}}
-        </div>
-        <div class="post-next">
-          {{#prev_post}}
-          <a href="{{url}}">
-            <span>{{title}}</span>
-            <span class="pager-next-arrow">
-              <i class="ion-chevron-right"></i>
-            </span>
-          </a>
-          {{/prev_post}}
-        </div>
-      </div>
-      <div class="post-comment" id="Comment" style="display:none">
-        <!-- 多说评论框 start -->
-        <div id="duoshuo_thread" class="ds-thread" data-thread-key="{{uuid}}" data-title="{{title}}" data-url="{{url absolute="true"}}"
-          style="display:none"></div>
-        <!-- 多说评论框 end -->
-        <div id="disqus_thread" style="display:none"></div>
-      </div>
+<section class="main post__wrap">
+{{#post}}
+<div class="article">
+  <div class="article-wrapper">
+    <h1>
+      <a href="#">{{title}}</a>
+    </h1>
+    <div class="basic">
+      <ul>
+        <li><a href="javascript:void(0)">发布于{{date published_at format="YYYY/MM/DD"}}</a></li>
+        <li><a href="javascript:void(0)">更新于{{date updated_at format="YYYY/MM/DD"}}</a></li>
+      </ul>
     </div>
+    <div class="detail">
+      {{ content }}
+    </div>
+    <div class="tags">
+      {{#foreach tags}}
+      <a href="{{url}}"><i class="iconfont icon-attachment"></i>{{name}}</a>
+      {{/foreach}}
+    </div>
+    <div class="share">
+      <div class="info">
+        <div>原文地址: <input type="text" value="{{url}}"></div>
+        <div>原创不易，请多多关照。</div>
+      </div>
+      <div class="social-share" data-wechat-qrcode-title="请打开微信扫一扫"></div>
+    </div>
+    <ul class="link">
+      <li>
+        <span>上一篇: </span>
+        {{#prev_post}}
+        <a class="prev" href="{{url}}">
+          <span class="title">{{title}}</span>
+        </a>
+        {{else}}
+        <span>已是最新一篇<i class="iconfont icon-xiaolian"></i></span>
+        {{/prev_post}}
+      </li>
+      <li>
+        <span>下一篇: </span>
+        {{#next_post}}
+        <a class="next" href="{{url}}">
+          <span class="title">{{title}}</span>
+        </a>
+        {{else}}
+        <span>已是最后一篇<i class="iconfont icon-xiaolian"></i></span>
+        {{/next_post}}
+      </li>
+    </ul>
+    <div id="SOHUCS" sid="{{comment_id}}"></div>
   </div>
-  </section>
-  {{/post}}
+</div>
+{{/post}}
+</section>

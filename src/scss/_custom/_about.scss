@@ -1,0 +1,153 @@
+.about {
+    .info {
+        @include clearfix;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f8f8f8;
+        .avatar {
+            float: left;
+            img {
+                padding: 5px;
+                background: #f2f2f2;
+                border-radius: 3px;
+                height: 200px;
+            }
+        }
+        .social {
+            float: left;
+            padding-left: 20px;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    height: 40px;
+                    i {
+                        margin-right: 10px;
+                    }
+                    .iconfont {
+                        color: $gray-dark;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $brand-dark;
+                        &:hover {
+                            color: $brand-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .description {
+        padding: 20px 0;
+        border-bottom: 1px solid #f8f8f8;
+        color: $gray-dark;
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            color: $brand-dark;
+            &:not(:first-child){
+                margin-top: 30px;
+            }
+        }
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        blockquote {
+            position: relative;
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #e4e4e4;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 20px;
+            &::before,
+            &::after {
+                display: inline-block;
+                position: absolute;
+                font-family: "iconfont" !important;
+                font-size: 18px;
+                height: 30px;
+                line-height: 30px;
+                width: 30px;
+                background: #fff;
+                text-align: center;
+                color: $gray;
+            }
+            &::before {
+                content: '\e60f';
+                background: #fff;
+                top: -15px;
+                left: -10px;
+            }
+            &::after {
+                content: '\e60e';
+                bottom: -15px;
+                right: -10px;
+            }
+        }
+        ul {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding: 0;
+            list-style: none;
+            li {
+                padding-left: 15px;
+                position: relative;
+                line-height: 24px;
+                &::before {
+                    content: ' ';
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    border-radius: 4px;
+                    left: 0;
+                    top: 8px;
+                    background: $gray-light;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    padding-left: 15px;
+                    position: relative;
+                    &::before {
+                        content: ' ';
+                        display: block;
+                        width: 3px;
+                        height: 3px;
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        background: $gray-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: $container-width) {
+    .about {
+        .info {
+            padding-bottom: 0;
+            .avatar {
+                float: none;
+                margin-bottom: 20px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .social {
+                padding: 0;
+            }
+        }
+    }
+}

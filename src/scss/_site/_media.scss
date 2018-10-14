@@ -1,0 +1,103 @@
+@media all and (max-width: $container-width) and (min-width: $container-width-sm) {
+  .header {
+    .header-wrapper {
+      width: $container-width-sm;
+    }
+  }
+  .content {
+    .content-wrapper {
+      width: $container-width-sm;
+    }
+  }
+  .footer {
+    .footer-wrapper {
+      width: $container-width-sm;
+    }
+  }
+}
+
+@media all and (max-width: $container-width-sm) {
+  .header {
+    .header-wrapper {
+      width: 100%;
+      .brand {
+        float: none;
+        text-align: center;
+        box-shadow: 1px 1px 1px #f2f2f2;
+      }
+      .tool {
+        display: none;
+      }
+      .nav {
+        float: none;
+        ul {
+          padding-left: 20px;
+          padding-right: 20px;
+          li {
+            line-height: 40px;
+            display: inline-block;
+            a {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    .post__wrap {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .content-wrapper {
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: block;
+      width: 100%;
+    }
+    .article-wrapper {
+      width: 100%;
+    }
+  }
+  .side {
+    display: none;
+  }
+  .footer {
+    .footer-wrapper {
+      width: 100%;
+      .sns {
+        padding: 20px;
+      }
+    }
+    .bottom-wrapper {
+      font-size: 10px;
+    }
+  }
+  .article {
+    .link{
+      .title{
+        display: inline-block;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+    }
+    .share {
+      display: block;
+      .info {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #f2f2f2;
+      }
+      .ds-share {
+        width: auto;
+        #ds-reset {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
