@@ -1,0 +1,26 @@
+<section class="side">
+  <div class="side-wrapper">
+    <div class="box">
+      <h2>推荐标签</h2>
+      {{#get "tags" limit="12"}}
+      <ul class="tag-list">
+        {{#foreach tags}}
+        <li class="tag-list-item"><a class="tag-list-link" href="{{url}}">{{name}}</a></li>
+        {{/foreach }}
+      </ul>
+      {{/get}}
+    </div>
+    <div class="box">
+      <h2>近期更新</h2>
+      {{#get "posts" limit="6" order="updated_at asc"}}
+      <ul class="latest-list">
+        {{#foreach posts}}
+        <li class="latest-list-item"><a class="latest-list-link" href="{{url}}">{{title}}</a>
+          <div class="date">{{date updated_at format="YYYY/MM/DD"}}</div>
+        </li>
+        {{/foreach }}
+      </ul>
+      {{/get}}
+    </div>
+  </div>
+</section>

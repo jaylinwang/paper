@@ -116,7 +116,9 @@ gulp.task('zip', ['css', 'js', 'vendor', 'font'], function () {
       '!node_modules',
       '!node_modules/**',
       '!dist',
-      '!dist/**'
+      '!dist/**',
+      '!src',
+      '!src/**',
   ])
       .pipe(zip(filename))
       .pipe(gulp.dest(targetDir));

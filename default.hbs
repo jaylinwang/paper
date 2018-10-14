@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="{{asset "css/onepice.min.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "vendors/share.min.css"}}" />
-
   {{ghost_head}}
 </head>
 
@@ -73,7 +72,7 @@
     <div class="bottom-wrapper">
       <div class="copy">
         &copy; 2011~{{date now format="YYYY"}}
-        小林小记 |
+        {{@blog.title}} |
         蜀ICP备16028753号 |
         基于ghost搭建
       </div>
@@ -82,6 +81,7 @@
   <script src="{{asset "vendors/jquery-2.1.4.min.js"}}"></script>
   <script src="{{asset "vendors/share.min.js"}}"></script>
   <script src="{{asset "vendors/highlight.js"}}"></script>
+  <script src="{{asset "js/onepice.min.js"}}"></script>
   <!-- share -->
   <script>
     var $config = {
@@ -95,20 +95,21 @@
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?5638e2ceb09a10c160d902e9e8d53874";
+    hm.src = "https://hm.baidu.com/hm.js?" + window.$onepice.baiduAnalytics;
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
   </script>
 
-  {{#is post}}
+
+  {{#is "post"}}
   <script type="text/javascript">
-    (function () {
-      var appid = 'cytiqJJex';
-      var conf = 'prod_13b3855b47186261ac5d515f4c1abd77';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) { window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
-    })(); </script>
+  (function(){
+  var appid = window.$onepice.changyan.appid;
+  var conf = window.$onepice.changyan.appkey;
+  var width = window.innerWidth || document.documentElement.clientWidth;
+  if (width < 960) {
+  window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   {{/is}}
 </body>
 

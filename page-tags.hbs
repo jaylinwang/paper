@@ -1,0 +1,10 @@
+{{!< default}}
+<div class="tagcloud">
+    {{#get "tags"}}
+    <div class="tags">
+      {{#foreach tags}}
+      <a href="{{url}}" style="font-size: 14px;">{{name}}</a>
+      {{/foreach}}
+    </div>
+    {{/get}}
+</div>
