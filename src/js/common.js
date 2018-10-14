@@ -8,11 +8,4 @@
     $('.search-icon').on('click', function () {
         $('.search-form').submit();
     });
-    $('.toc-icon').on('click', function () {
-        if (!$('.toc').hasClass('active')) {
-            $('.toc').addClass('active');
-        } else {
-            $('.toc').removeClass('active');
-        }
-    });
 })();
