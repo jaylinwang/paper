@@ -1,28 +1,27 @@
 {{!< default}}
-
 <section class="main home">
-    <div class="content">
-        {{#foreach posts}}
-            <article class="widget post widget-excerpt">
-                <header class="widget-header">
-                    <h2 class="widget-title">
-                        <a href="{{url}}">{{{title}}}</a>
-                    </h2>
-                    <div class="widget-meta">
-                        <span>
-                            <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
-                        </span>
-                    </div>
-                </header>
-                <section class="widget-body">
-                    {{content}}
-                </section>
-                <section class="widget-footer">
-                    <a class="btn" href="{{url}}">阅读全文</a>
-                </section>
-            </article>
-        {{/foreach}}
+  <div class="content">
+    {{#foreach posts}}
+    <article class="widget post widget-excerpt">
+      <header class="widget-header">
+        <h2 class="widget-title">
+          <a href="{{url}}">{{{title}}}</a>
+        </h2>
+        <div class="widget-meta">
+          <span>
+            <i class="ion-ios-timer-outline"></i> {{date format='YYYY-MM-DD'}}
+          </span>
+        </div>
+      </header>
+      <section class="widget-body">
+        {{excerpt}}
+      </section>
+      <section class="widget-footer">
+        <a class="btn" href="{{url}}">阅读全文</a>
+      </section>
+    </article>
+    {{/foreach}}
 
-        {{pagination}}
-    </div>
-</section>
+    {{pagination}}
+  </div>
+  </section>

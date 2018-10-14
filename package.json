@@ -1,6 +1,6 @@
 {
   "name": "onepice",
-  "version": "2..0",
+  "version": "1.1.0",
   "description": "this is a simple theme for ghost",
   "main": "index.js",
   "scripts": {
@@ -8,22 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guovz/onepice.git"
+    "url": "git+https://github.com/jaylinwang/onepice.git"
   },
   "keywords": [
-    "ghost",
-    "theme",
+    "ghost-theme",
     "onepice"
   ],
   "author": {
     "name": "Jaylin Wang",
-    "url": "http://guovz.com"
+    "url": "http://jaylin.wang",
+    "email": "jaylin0019@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guovz/onepice/issues"
+    "url": "https://github.com/jaylinwang/onepice/issues"
   },
-  "homepage": "https://github.com/guovz/onepice#readme",
+  "homepage": "https://github.com/jaylinwang/onepice#readme",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
@@ -35,6 +35,10 @@
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.1",
     "gulp-uglify": "^1.5.1",
-    "gulp-uglifyjs": "^0.6.2"
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-zip": "^4.2.0"
+  },
+  "config": {
+    "posts_per_page": 10
   }
 }

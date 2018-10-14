@@ -12,7 +12,5 @@ desktop.ini
 
 .vscode
 
-partials/custom/config.hbs
-partials/custom/socials.hbs
-
+/dist
 

@@ -1,4 +1,3 @@
-(function($) {
-    hljs.initHighlightingOnLoad();
-    $('.home .more').closest('p').nextAll().hide();
+(function ($) {
+  hljs.initHighlightingOnLoad();
 }(jQuery));
