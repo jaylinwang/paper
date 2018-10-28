@@ -1,6 +1,6 @@
 /**
  * onepice - this is a simple theme for ghost
- * @version 1.1.0
+ * @version 1.1.1
  * @link    https://github.com/jaylinwang/onepice#readme
  * @author  Jaylin Wang (http://jaylin.wang)
  * @license MIT
