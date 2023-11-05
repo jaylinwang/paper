@@ -1,18 +1,20 @@
 {
-  "name": "onepice",
-  "version": "1.1.1",
-  "description": "this is a simple theme for ghost",
+  "name": "paper",
+  "version": "1.0.0",
+  "description": "一个简介的ghost中文主题",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp dev",
+    "zip": "gulp zip",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaylinwang/onepice.git"
+    "url": "git+https://github.com/jaylinwang/paper.git"
   },
   "keywords": [
     "ghost-theme",
-    "onepice"
+    "paper"
   ],
   "author": {
     "name": "Jaylin Wang",
@@ -21,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaylinwang/onepice/issues"
+    "url": "https://github.com/jaylinwang/paper/issues"
   },
-  "homepage": "https://github.com/jaylinwang/onepice#readme",
+  "homepage": "https://github.com/jaylinwang/paper#readme",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
